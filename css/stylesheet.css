@@ -1,0 +1,191 @@
+﻿body { background-color: #3C4E7F;
+}
+
+h2 {text-align:center;}
+
+#table { padding:20px;
+}
+
+#container { width:80%; margin: 0 auto; border:2px solid black; background-color: ghostwhite; 
+}
+
+#header_container {
+    width: 100%;
+    float: left;
+    margin: 0 auto;
+    background-color:#D8DAE1;
+    border-bottom: 2px solid black;
+}
+
+#header { padding:8px; 
+    background-color:#D8DAE1;
+    width: 80%;
+    height: 100px;
+    float: left;
+    text-align: center;
+    margin: 0 auto;
+    background-color: transparent;
+    -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box; 
+    box-sizing: border-box;
+
+}
+
+#left_logo{
+	width:15%;
+	float:left;
+	margin: 0 auto;
+	background-color:transparent;
+	text-align:center;
+
+
+}
+
+#currentTime { padding: 8px; 
+               width:15%;
+	           float:right;
+	           margin: 0 auto;
+	           background-color:transparent;
+               
+	           
+}
+
+#menu {display: block;
+    float:left;
+    width: 791px;
+}
+
+#menu li {display: inline;
+    }
+
+#menu ul {list-style-type: none;
+    margin: 0;
+    padding: 0;
+    }
+
+#libraryMenu {
+    width: auto;
+    float: left;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+    #libraryMenu li a {
+        display: block;
+        padding: 8px 15px !important;
+        text-decoration: none;
+        font-weight: bold;
+        color: #3C4E7F;
+        background-color: ghostwhite;
+        /*border-right: 1px solid #ccc;*/
+    }
+
+        #libraryMenu li a:hover {
+            color: #3C4E7F;
+            background-color: ghostwhite;
+        }
+
+.level1 li a {
+    padding: 200px;
+}
+
+.level2 li a {
+    /*border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;*/
+    border: 1px solid #ccc;
+    
+}
+
+
+#nav { padding:8px;
+}
+
+#main { padding:8px;
+}
+
+
+
+
+#footer{ padding:8px;
+    text-align:center;
+    font-style:italic; background-color:#D8DAE1;
+    border-top:2px solid black;
+    font-weight:bold;
+    
+}
+
+#currentTime{
+    align-items:center;
+    text-align:center;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+
+#twitter{float:left;
+         Width:10%;
+         clear:both;
+         
+}
+
+#menu_container{
+    display:block;
+    width:100%;
+	float:left;
+	margin: 0 auto;
+    clear:both;
+	border-bottom:2px solid black;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box; /* Firefox, other Gecko */
+     box-sizing: border-box;
+     color: ghostwhite;
+	}
+
+#libHours {
+}
+
+.login {
+    display: block;
+    float: right;
+    padding: 8px 15px !important;
+    text-align:left;
+    text-decoration: none;
+    font-weight: bold;
+    color: #069;
+    background-color:ghostwhite;
+    /*border-left: 1px solid #ccc;*/
+}
+
+   .login a {
+        font-weight: bold;
+        color: #3C4E7F;
+        text-decoration: none;
+    }
+
+#search{
+	width:50%;
+	float:left;
+	margin:0 auto;
+	padding: 8px 15px !important;
+    text-align:left;
+    text-decoration: none;
+    font-weight: bold;
+    color: #3C4E7F;
+    background-color:transparent;
+    
+}
+
+.delete { font-style:italic; color:red; font-weight: bold;
+}
+
+.cssgridview {width:auto; margin:2px 0 5px 0; border: solid 10px white; border-collapse:collapse; text-align:center;}
+.cssgridview td {padding:5px; border:solid 1px white; color:black; background-color:powderblue;}
+.cssgridview th {padding:5px; color:white; background:dodgerblue; border-left:solid 1px white; font-size:0.9em;}
+
+
+.cssformview {width:auto; margin:5px 0 10px 0; border: solid 10px white; border-collapse:collapse; text-align:center;}
+.cssformview td {padding:10px; border:solid 1px white; color:black;background-color:powderblue;}
+.cssformview th {padding:10px; color:white; background:dodgerblue; border-left:solid 1px white; font-size:0.9em;}
+

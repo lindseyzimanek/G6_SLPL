@@ -1,0 +1,99 @@
+﻿<%@ Master Language="VB" CodeFile="admin.master.vb" Inherits="library" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    </title>
+
+    <link rel="stylesheet" type="text/css" href="~/css/admin.css" />
+
+</head>
+<body>
+   
+    <form id="form1" runat="server">
+        <div>
+    <div id="container">
+
+       <div id="header_container">
+
+            <div id="left_logo">
+
+                    <asp:Image ID="leftlogo" runat="server" AlternateText="left logo" Height="145px" ImageUrl="~/Logos/SLPL_logo.png" Width="160px" />
+                </div> <!-- close the left_logo DIV -->
+
+        <div id="header">
+            <h1>South Liberty Public Library</h1>
+            <h3>SLPL Website</h3>
+        </div>
+
+        <div id="currentTime">
+            <asp:Label ID ="currentTimeLabel" runat="server" CssClass="currentTime"></asp:Label>
+        </div>       
+        
+      </div> <!-- close the header_container DIV -->
+
+            <div id="menu_container">
+                <div id="menu">
+                    <asp:Menu ID="libraryMenu" runat="server" Orientation="Horizontal" StaticSubMenuIndent="16px" CssClass="static">
+                        <Items>
+                            <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Home" Value="Home"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/aboutus.aspx" Text="About Us" Value="About Us"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/contact.aspx" Text="Contact Us" Value="Contact Us"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/patron/Default.aspx" Text="Patron" Value="Patron"> 
+                                 <asp:MenuItem NavigateUrl="~/patron/viewresources.aspx" Text="View All Materials" Value="View All Materials"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/librarian/Default.aspx" Text="Librarian" Value="Librarian">
+                                <asp:MenuItem NavigateUrl="~/librarian/addnewpatron.aspx" Text="Add New Patron" Value="Add New Patron"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/librarian/newresource.aspx" Text="Add New Material" Value="Add New Material"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/librarian/viewallpatrons.aspx" Text="View All Patrons" Value="View All Patrons"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/librarian/viewresources.aspx" Text="View All Materials" Value="View All Materials"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/librarian/checkoutMaterial.aspx" Text="Check Out Material" Value="Check Out Material"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/librarian/checkinMaterial.aspx" Text="Check In Material" Value="Check In Material"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/librarian/viewAllCheckedOut.aspx" Text="View All Checked Out Materials" Value="View All Checked Out Materials"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/librarian/materialsDueToday.aspx" Text="Materials Due Today" Value="Materials Due Today"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/librarian/materialsOverDue.aspx" Text="Materials OverDue" Value="Materials OverDue"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/superLibrarian/Default.aspx" Text="Super Librarian" Value="Super Librarian">
+                                <asp:MenuItem NavigateUrl="~/siteManager/add_user.aspx" Text="Add User" Value="Add User"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/siteManager/edit_user.aspx" Text="Edit Users" Value="Edit Users"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/siteManager/roles.aspx" Text="Edit Roles" Value="Edit Roles"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/siteManager/users_by_role.aspx" Text="Users by Role" Value="Users by role"></asp:MenuItem>
+
+
+                            </asp:MenuItem> 
+                        </Items>
+                </asp:Menu>
+                </div> <!-- close the menu DIV -->
+                
+                <div id="search">
+                    <asp:TextBox ID="searchTB" runat="server"></asp:TextBox>
+                    &nbsp;&nbsp;&nbsp;
+                    <asp:Button ID="searchBtn" runat="server" Text="Search" />
+                </div> <!-- close the search DIV -->
+                
+                <div class="login">
+                    <asp:LoginStatus ID="LoginStatus1" runat="server" />
+                </div> <!-- close the login_status DIV -->
+
+            </div>  <!-- close the menu_container DIV -->
+
+
+       
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+            
+
+        <div id="footer">
+            &copy; <asp:Label ID="lbl_copy" runat="server" Text=""></asp:Label> South Liberty Public Library
+        </div>
+
+    </div>
+            </div>
+    </form>
+</body>
+</html>

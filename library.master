@@ -1,0 +1,122 @@
+﻿<%@ Master Language="VB" CodeFile="library.master.vb" Inherits="library" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    </title>
+
+    <link rel="stylesheet" type="text/css" href="~/css/stylesheet.css" />
+
+</head>
+<body>
+   
+    <form id="form1" runat="server">
+        <div>
+    <div id="container">
+
+       <div id="header_container">
+
+            <div id="left_logo">
+
+                    <asp:Image ID="leftlogo" runat="server" AlternateText="left logo" Height="145px" ImageUrl="~/Logos/SLPL_logo.png" Width="160px" />
+                </div> <!-- close the left_logo DIV -->
+
+        <div id="header">
+            <h1>South Liberty Public Library</h1>
+            <h3>SLPL Website</h3>
+        </div>
+
+        <div id="currentTime">
+            <asp:Label ID ="currentTimeLabel" runat="server" CssClass="currentTime"></asp:Label>
+        </div>       
+        
+      </div> <!-- close the header_container DIV -->
+
+            <div id="menu_container">
+                <div id="menu">
+                    <asp:Menu ID="libraryMenu" runat="server" Orientation="Horizontal" StaticSubMenuIndent="16px" CssClass="static">
+                        <Items>
+                            <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Home" Value="Home"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/aboutus.aspx" Text="About Us" Value="About Us"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/contact.aspx" Text="Contact Us" Value="Contact Us"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/patron/Default.aspx" Text="Patron" Value="Patron"> 
+                                 <asp:MenuItem NavigateUrl="~/patron/viewresources.aspx" Text="View All Materials" Value="View All Materials"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/librarian/Default.aspx" Text="Librarian" Value="Librarian">
+                                <asp:MenuItem NavigateUrl="~/librarian/addnewpatron.aspx" Text="Add New Patron" Value="Add New Patron"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/librarian/newresource.aspx" Text="Add New Material" Value="Add New Material"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/librarian/viewallpatrons.aspx" Text="View All Patrons" Value="View All Patrons"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/librarian/viewresources.aspx" Text="View All Materials" Value="View All Materials"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/librarian/checkoutMaterial.aspx" Text="Check Out Material" Value="Check Out Material"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/librarian/checkinMaterial.aspx" Text="Check In Material" Value="Check In Material"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/librarian/viewAllCheckedOut.aspx" Text="View All Checked Out Materials" Value="View All Checked Out Materials"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/librarian/materialsDueToday.aspx" Text="Materials Due Today" Value="Materials Due Today"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/librarian/materialsOverDue.aspx" Text="Materials OverDue" Value="Materials OverDue"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/superLibrarian/Default.aspx" Text="Super Librarian" Value="Super Librarian">
+                                <asp:MenuItem NavigateUrl="~/siteManager/add_user.aspx" Text="Add User" Value="Add User"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/siteManager/edit_user.aspx" Text="Edit Users" Value="Edit Users"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/siteManager/roles.aspx" Text="Edit Roles" Value="Edit Roles"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/siteManager/users_by_role.aspx" Text="Users by Role" Value="Users by role"></asp:MenuItem>
+
+
+                            </asp:MenuItem> 
+                        </Items>
+                </asp:Menu>
+                </div> <!-- close the menu DIV -->
+                
+                <div id="search">
+                    <asp:TextBox ID="searchTB" runat="server"></asp:TextBox>
+                    &nbsp;&nbsp;&nbsp;
+                    <asp:Button ID="searchBtn" runat="server" Text="Search" />
+                </div> <!-- close the search DIV -->
+                
+                <div class="login">
+                    <asp:LoginStatus ID="LoginStatus1" runat="server" />
+                </div> <!-- close the login_status DIV -->
+
+            </div>  <!-- close the menu_container DIV -->
+
+
+        <table>
+            <tr>
+                <td style="vertical-align:top;">
+
+<div id="twitter">
+            <div style="margin-top:16px;margin-bottom:15px;border:1px solid #e5ebf7;width:280px;padding:10px 0 10px 10px;"><h2 style="font-size:21px;margin:0 20px 0 8px;padding-bottom:5px;"><asp:Image ID="TwitterLogo" runat="server" ImageUrl="~/Logos/twitter-bird-light.png" style="float:left;margin-left:-12px;padding:3px 6px 0px 0;border:none;" alt="twitter bird" width="34" /> <a href="https://twitter.com/MSCI3300_SLPL" target="_blank" style="text-decoration:none;">@MSCI3300_SLPL</a></h2>
+            <div style="border-style:solid; border-color: inherit; border-width: medium; text-align:center; padding:0;width:88%; height:383px; overflow-y:scrollbar; overflow-x:hidden; margin-top:0;">
+            <a class="twitter-timeline" width="250px" height="1000px" href="https://twitter.com/MSCI3300_SLPL" data-link-color="#4e749e" data-screen-name="MSCI3300_SLPL" data-show-replies="false" data-chrome="nofooter noheader noborder noscrollbar transparent"  data-widget-id="490161487281786882">@MSCI3300_SLPL</a>
+            <script>!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https'; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = p + "://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } }(document, "script", "twitter-wjs");</script></div></div>
+                </div>
+
+                </td>
+
+        <td style="vertical-align:top;">
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+            </td>
+        </tr>
+        </table>
+        
+
+        <div id="footer">
+            &copy; <asp:Label ID="lbl_copy" runat="server" Text=""></asp:Label> South Liberty Public Library
+            <p>
+            <a href="http://jigsaw.w3.org/css-validator/check/referer">
+            <img style="border:0;width:88px;height:31px"
+            src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+            alt="Valid CSS!" />
+            </a>
+</p>
+        </div>
+
+    </div>
+            </div>
+    </form>
+</body>
+</html>
